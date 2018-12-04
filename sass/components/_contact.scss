@@ -1,0 +1,78 @@
+.form {
+    &__group {
+        display: block;
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+
+        &--half {
+            width: 48%;
+            float: left;
+            @include clearfix;
+
+            &:not(:nth-child(n+2)) {
+                margin-right: 4%;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        display: block;
+        font-family: inherit;
+        font-size: 1.5rem;
+        color: $color-dark-grey;
+        padding: 1.5rem 2rem 1.2rem;
+        border-radius: .4rem;
+        background: rgba($color-white, .5);
+        border: none;
+        border-bottom: .3rem solid transparent;
+        transition: all .3s ease-out;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: .3rem solid $color-light-yellow;
+
+            &:invalid {
+                border-bottom: 3px solid $color-primary-red;
+            }
+        }
+
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-moz-placeholder,
+        &:-ms-input-placeholder {
+            color: $color-light-grey;
+        }
+    }
+
+    &__textarea {
+        resize: vertical;
+        height: 15rem;
+        min-height: 10rem;
+        max-height: 50rem;
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $color-dark-grey;
+        margin: 1rem 0 0 2rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label,
+    &__textarea:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

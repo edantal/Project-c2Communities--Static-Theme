@@ -1,0 +1,72 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: all .3s;
+
+    &__box {
+        width: 75%;
+        height: 70rem;
+        background-color: $color-primary-blue;
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        position: absolute;
+        @include center(xy);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .5s .2s;
+    }
+
+    &__content {
+        width: 99%;
+        height: 98%;
+        position: absolute;
+        @include center(xy);
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+
+    &:target &__box {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-white;
+            position: absolute;
+            top: -1.5rem;
+            right: -3.5rem;
+            font-size: 5rem;
+            text-decoration: none;
+            line-height: 1;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover {
+            color: $color-primary-blue;
+        }
+    }
+}
+
+.popup#popup-video {
+    .popup__box {
+        @include respond(tab-port) {
+            width: 80%;
+            height: 30rem;
+        }
+    }
+}

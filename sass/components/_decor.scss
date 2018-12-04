@@ -1,0 +1,41 @@
+.decor {
+  &__img-box {
+    position: relative;
+    width: 130vw;
+    height: 15rem;
+    margin: 0 0 2rem;
+
+    @include respond(tab-port) {
+      height: 6.5rem;
+    }
+
+    @include respond(phone) {
+      height: 2.5rem;
+    }
+
+    &:nth-child(2n+0) {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+
+      & .decor__img {
+        left: 16rem;
+
+        @include respond(phone) {
+          left: 7rem;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}

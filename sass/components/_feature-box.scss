@@ -1,0 +1,33 @@
+.feature-box {
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    display: block;
+    position: relative;
+
+    &__img-box {
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto 7rem;
+    }
+
+    &__img-yellow {
+        background-color: $color-primary-yellow;
+    }
+
+    &__img-blue {
+        background-color: $color-primary-blue;
+    }
+
+    &__img-red {
+        background-color: $color-primary-red;
+    }
+
+    &__img {
+        height:110%;
+        position: absolute;
+        @include center($xy:xy);
+    }
+}

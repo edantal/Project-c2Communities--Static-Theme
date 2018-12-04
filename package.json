@@ -1,0 +1,14 @@
+{
+  "name": "c2",
+  "version": "1.0.0",
+  "description": "c2 website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "edanTal",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

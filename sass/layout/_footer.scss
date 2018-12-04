@@ -1,0 +1,232 @@
+.footer {
+    background-color: $color-dark-grey;
+    border-top: .8rem solid $color-primary-blue;
+    padding: 10rem 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    @include respond(tab-port) {
+        padding: 25rem 0 10rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    // LOGO
+    &__logo-box {
+        width: 12%;
+        position: relative;
+        float: left;
+
+        @include respond(tab-port) {
+            width: auto;
+            position: absolute;
+            float: none;
+            top: -15rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__logo {
+        width: 10rem;
+        height: auto;
+    }
+
+    // NAVIGATION
+    &__navigation {
+        width: 75%;
+        float: left;
+        margin-left: 13%;
+
+        @include respond(tab-port) {
+            width: auto;
+            float: none;
+            margin: 0;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        column-count: 2;
+        column-gap: 0rem;
+
+        @include clearfix;
+
+        @include respond(tab-port) {
+            column-count: 1;
+        }
+    }
+
+    &__item {
+        display: block;
+        width: 80%;
+        height: auto;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+
+            @include respond(tab-port) {
+                margin-bottom: 6.5rem;
+            }
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-blue;
+        }
+    }
+
+    // SIGNUP FORM
+    &__form-signup {
+        @include clearfix;
+
+        &-title {
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: left;
+            color: $color-primary-blue;
+
+            @include respond(tab-port) {
+                font-size: 3rem;
+                margin-top: 2rem;
+                text-align: center;
+            }
+
+            &--sub {
+                display: block;
+                padding: 2.5rem 0;
+                font-weight: 300;
+                color: $color-white;
+            }
+        }
+
+        &-group {
+            &--input {
+                width: 65%;
+                float: left;
+
+                @include respond(tab-port) {
+                    width: 80%;
+                    margin: 2rem 10%;
+                }
+            }
+
+            &--submit {
+                width: 30%;
+                float: left;
+                margin-left: 5%;
+
+                @include respond(tab-port) {
+                    width: 50%;
+                    margin: 0 25%;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-input {
+            width: 100%;
+            display: block;
+            font-family: inherit;
+            font-size: 1.5rem;
+            color: $color-dark-grey;
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            background-color: $color-white;
+            border: none;
+            border-bottom: 3px solid transparent;
+
+            @include respond(tab-port) {
+                font-size: 2.5rem;
+                text-align: left;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($color-black, .1);
+                border-bottom: 3px solid $color-primary-blue;
+
+                &:invalid {
+                    border-bottom: 3px solid $color-primary-red;
+                }
+            }
+
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &:-moz-placeholder,
+            &:-ms-input-placeholder {
+                color: $color-light-grey;
+            }
+        }
+
+        &-label {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $color-primary-blue;
+            margin: 1rem 0 0 2rem;
+            display: block;
+            transition: all .3s;
+
+            @include respond(tab-port) {
+                font-size: 2rem;
+                text-align: left;
+            }
+        }
+
+        &-input:placeholder-shown + &-label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+
+        &-submit {
+            width:100%;
+            background-color: $color-dark-grey;
+            text-decoration: none;
+            padding: 1.5rem 3rem;
+            display: inline-block;
+            border-radius: 3px;
+            position: relative;
+            font-family: inherit;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-primary-blue;
+            border: 1px solid $color-primary-blue;
+            outline: none;
+            cursor: pointer;
+            transition: all .2s;
+
+            @include respond(tab-port) {
+                font-size: 2.5rem;
+            }
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-primary-blue;
+                box-shadow: 0 1rem 2rem rgba($color-black,.2);
+            }
+            
+            &:active {
+                color: $color-white;
+                border: 1px solid $color-white;
+                box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+            }
+        }
+    }
+}

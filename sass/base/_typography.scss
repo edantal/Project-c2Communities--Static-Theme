@@ -1,0 +1,186 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: $default-font-size;
+  font-weight: 400;
+  line-height: 1.3;
+  color: $color-black;
+}
+
+.heading {
+  &-primary {
+    color:$color-white;
+    backface-visibility: hidden;
+    font-weight: 600;
+    font-size: 4.5rem;
+    animation: moveInLeft 1s ease-out;
+
+    @include respond(phone) {
+      font-size: 4rem;
+    }
+    
+    &--sub {
+      color:$color-primary-yellow;
+    }
+  }
+    
+  &-secondary {
+    backface-visibility: hidden;
+    font-weight: 600;
+    font-size: 4rem;
+    animation: moveInLeft 1s ease-out;
+
+    @include respond(phone) {
+      font-size: 2.8rem;
+    }
+  }
+  
+  &-tertiary {
+    backface-visibility: hidden;
+    font-weight: 600;
+    font-size: 3.2rem;
+    position: relative;
+  }
+
+  &-quaternary {
+    backface-visibility: hidden;
+    font-weight: 600;
+    font-size: 2.3rem;
+    position: relative;
+  }
+
+  &-quinary {
+    backface-visibility: hidden;
+    font-weight: 300;
+    font-size: 2.3rem;
+    position: relative;
+  }
+
+  &--black {
+    color:$color-black;
+  }
+
+  &--white {
+    color:$color-white;
+  }
+
+  &--dark-grey {
+    color:$color-dark-grey;
+  }
+}
+
+.paragraph {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: -.1px;
+
+  @include respond(phone) {
+    font-size: 2.1rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &--medium {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    letter-spacing: 0px;
+  }
+
+  &--small {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0px;
+  }
+
+  &--white {
+    color: $color-white;
+
+    a {
+      &:link,
+      &:visited {
+        color: $color-white;
+      }
+  
+      &:hover,
+      &:active {
+        border-bottom: 1px dotted $color-white;
+      }
+    }
+
+    .highlight {
+      border-bottom: 1px dotted $color-white;
+    }
+  }
+
+  &--black {
+    color: $color-black;
+
+    a {
+      &:link,
+      &:visited {
+        color: $color-black;
+      }
+
+      &:hover,
+      &:active {
+        border-bottom: 1px dotted $color-black;
+      }
+    }
+
+    .highlight {
+      border-bottom: 1px dotted $color-black;
+    }
+  }
+
+  &--dark-grey {
+    color: $color-dark-grey;
+
+    a {
+      &:link,
+      &:visited {
+        color: $color-dark-grey;
+      }
+
+      &:hover,
+      &:active {
+        border-bottom: 1px dotted $color-dark-grey;
+      }
+    }
+
+    .highlight {
+      border-bottom: 1px dotted $color-dark-grey;
+    }
+  }
+
+  a {
+    &:link,
+    &:visited {
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+ol {
+  counter-reset: item;
+
+  ol {
+    margin-left: 1.5rem;
+  }
+
+  li {
+    display: block;
+    margin-bottom: 1.5rem;
+
+    &:before {
+      font-weight: 600;
+      content: counters(item, ".") " ";
+      counter-increment: item;
+    }
+  }
+}

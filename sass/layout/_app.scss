@@ -1,0 +1,126 @@
+.app {
+    &__text-box {
+        width: 25%;
+        position: relative;
+        float: right;
+        margin: 0 20% 0 5%;
+
+        @include respond(tab-port) {
+            width: 30%;
+            position: absolute;
+            margin: 0;
+            top: 5rem;
+            right: 10rem;
+        }
+
+        @include respond(phone) {
+            width: 40%;
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+
+    &__img-box {
+        width: 45%;
+        position: relative;
+        float: left;
+        margin-top: -30rem;
+        overflow: hidden;
+
+        @include respond(tab-port) {
+            position: absolute;
+            width: 50%;
+            margin: 0rem;
+            left: 10rem;
+            bottom: 30%;
+        }
+
+        @include respond(phone) {
+            width: 80%;
+            left: 0rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__btns {
+        width: 45%;
+        height: 8rem;
+        position: relative;
+        float: right;
+        margin-left: 5%;
+
+        @include clearfix;
+
+        @include respond(tab-port) {
+            width: 60%;
+            height: auto;
+            position: absolute;
+            float: none;
+            margin: 0;
+            left: 20%;
+            bottom: 2.5rem;
+        }
+
+        @include respond(phone) {
+            width: 86%;
+            height: auto;
+            position: absolute;
+            float: none;
+            margin: 0;
+            left: 7%;
+            bottom: 4rem;
+        }
+    }
+
+    &__btn {
+        &:link,
+        &:visited {
+            width: 48%;
+            display: inline-block;
+            position: relative;
+            float: left;
+            transition: all .2s;
+            text-align: center;
+        }
+
+        &:hover {
+            transform: translateY(-.3rem);
+    
+            &::after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        }
+        
+        &:active {
+            transform: translateY(-.1rem);
+        }
+
+        &:not(:last-child) {
+            margin-right: 4%;
+        }
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            background-color: $color-white;
+            border-radius: 2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .4s;
+        }
+    }
+}

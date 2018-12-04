@@ -1,0 +1,297 @@
+// INNER PAGE MAIN SECTION
+.section__inner-header {
+  padding: 15rem 0 10rem;
+  position: relative;
+  z-index: 10;
+  @include clearfix;
+
+  &--small {
+    padding: 15rem 0 5rem;
+  }
+}
+
+.section__inner-content {
+  padding: 15rem 0 2rem;
+  position: relative;
+  z-index: 9;
+  @include clearfix;
+  @include respond(tab-port) {
+    padding: 7rem 0 2rem;
+  }
+
+  .inner-float-right {
+    float: right;
+    @include respond(tab-port) {
+      float: none;
+    }
+  }
+  .inner-float-left {
+    width: 70%;
+    float: left;
+    @include respond(tab-port) {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+.inner-header {
+  &__text-box {
+    width: 45%;
+    position: relative;
+    float: left;
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+  }
+
+  &__img-box {
+    width: 50%;
+    max-height: 20rem;
+    position: relative;
+    float: right;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+      width: 70%;
+      position: absolute;
+      float: none;
+      display: inline-block;
+      bottom: 0rem;
+      left: 13rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    float: right;
+    bottom: -25rem;
+
+    &--wide {
+      width: 60%;
+      bottom: 0rem;
+      @include respond(tab-port) {
+        width: 65%;
+      }
+    }
+
+    &--medium {
+      @include respond(tab-port) {
+        width: 45%;
+        bottom: -2rem;
+      }
+
+      @include respond(phone) {
+        width: 45%;
+        bottom: 62rem;
+      }
+    }
+
+    &--narrow {
+      width: 60%;
+      bottom: 0rem;
+      @include respond(tab-port) {
+        width: 45%;
+        bottom: -2rem;
+      }
+    }
+  }
+}
+
+.inner-content {
+  &--right {
+    float: right;
+  }
+
+  &--left {
+    float: left;
+  }
+
+  &__text-box {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &__full-text-box {
+    width: 100%;
+    position: relative;
+    display: block;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &__img-box {
+    width: 40%;
+    max-height: 30rem;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -20%);
+
+    @include respond(tab-port) {
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  &__services-box {
+    width: 20%;
+    position: relative;
+    display: inline-block;
+    margin: 7rem 5% 3rem 25%;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin: 0rem auto 3rem;
+    }
+  }
+
+  &__service {
+    width: 65%;
+    margin: 0 auto;
+    padding: 0;
+    @include respond(tab-port) {
+      width: 40%;
+      float: left;
+      margin: 0 5%;
+    }
+
+    .paragraph {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    &-img {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+    }
+
+    &-svg {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding: .5rem 0;
+    }
+
+    &-text {
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+  }
+}
+
+.inner-nav {
+  position: relative;
+  width: 30rem;
+  margin: 0;
+  @include respond(tab-port) {
+    width: 100%;
+    margin: 0 auto 5rem;
+  }
+}
+
+.legal-nav {
+  position: relative;
+  transition: all 1s ease-out;
+
+  & > a {
+    display: none;
+    @include respond(tab-port) {
+
+    }
+  }
+
+  & li {
+    position: relative;
+  }
+
+  /* first level */
+  & > ul {
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    & > li {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 1px solid $color-primary-blue;
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+
+      a {
+        display: block;
+        min-width: 100%;
+        padding: 1.5rem 1rem;
+        font-size: 1.8rem;
+        text-align: center;
+        color: $color-primary-blue;
+        background: $color-white;
+        text-decoration: none;
+      }
+  
+      &:hover > a {
+        color: $color-white;
+        background: $color-primary-blue;
+      }
+    }
+  }
+  &:target > ul {
+    display: block;
+  }
+
+  /* second level */
+  & li ul {
+    list-style-type: none;
+    display: none;
+    position: static;
+    top: 100%;
+  }
+  & li:hover ul {
+    display: block;
+
+    li {
+      a {
+        display: block;
+        min-width: 100%;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        color: $color-primary-blue;
+        background: $color-white;
+        text-decoration: none;
+      }
+  
+      &:hover > a {
+        color: $color-white;
+        background: $color-primary-yellow;
+      }
+    }
+  }
+}

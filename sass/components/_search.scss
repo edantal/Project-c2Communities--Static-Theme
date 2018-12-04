@@ -1,0 +1,47 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__input {
+        width: 20%;
+        font-family: inherit;
+        font-size: inherit;
+        background-color: $color-white;
+        border: 1px solid $color-light-grey;
+        border-radius: .7rem;
+        padding: 1rem 2rem;
+        margin-right: -3.5rem;
+        transition: all .2s;
+        @include respond(tab-port) {
+            width: 80%;
+        }
+
+        &:focus {
+            outline: none;
+            width: 30%;
+            @include respond(tab-port) {
+                width: 90%;
+            }
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: $color-white;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}

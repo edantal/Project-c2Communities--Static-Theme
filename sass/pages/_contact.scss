@@ -1,0 +1,32 @@
+// CONTACT FORM
+.contact {
+    width: 80%;
+    position: relative;
+    padding: 0;
+    @include respond(tab-port) {
+        width: 140%;
+        margin: 0;
+    }
+
+    &--full {
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        padding: 2rem 0 0;
+    }
+}
+
+// CONTACT MAP SECTION
+.section-map {
+    position: relative;
+    min-height: 60rem;
+    background-color: $color-white;
+    padding: 0;
+}
+
+// CONTACT MESSAGE SECTION
+.section-message {
+    position: relative;
+    padding: 10rem 0;
+}
+

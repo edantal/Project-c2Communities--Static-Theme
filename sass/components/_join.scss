@@ -1,0 +1,104 @@
+// JOIN SECTION
+.section__join {
+    padding: 10rem 0 40rem;
+    position: relative;
+    z-index: 10;
+    @include clearfix;
+}
+
+.join {
+    &__text-box {
+        width: 50%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__img-box {
+        width: 20%;
+        max-height: 10rem;
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-200%, -120%)
+    }
+
+    &__img {
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+
+    &__form-group {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__form-input {
+        width: 100%;
+        display: block;
+        font-family: inherit;
+        font-size: 1.5rem;
+        color: $color-dark-grey;
+        text-align: center;
+        padding: 1.5rem 2rem 1.2rem;
+        border-radius: .4rem;
+        background: rgba($color-white, .5);
+        border: none;
+        border-bottom: .3rem solid transparent;
+        transition: all .3s ease-out;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: .3rem solid $color-light-yellow;
+
+            &:invalid {
+                border-bottom: 3px solid $color-primary-red;
+            }
+        }
+
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-moz-placeholder,
+        &:-ms-input-placeholder {
+            color: $color-light-grey;
+        }
+    }
+
+    &__form-label {
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: $color-white;
+        text-align: center;
+        margin: 0 auto 2rem;
+        display: block;
+        transform: translateY(-11rem);
+        transition: all .3s;
+    }
+
+    &__form-input:placeholder-shown + &__form-label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__form-submit {
+        &:link,
+        &:visited {
+            width: 40%;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-align: center;
+            display: block;
+            margin: 5rem auto 2rem;
+            padding: 1rem 7rem;
+        }
+    }
+}

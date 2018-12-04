@@ -1,0 +1,127 @@
+// TEXT ALIGN
+.u-center-text { text-align: center !important; }
+.u-left-text { text-align: left !important; }
+.u-right-text { text-align: right !important; }
+.u-justify-text { text-align: justify !important; }
+
+// MARGIN
+.u-margin-bottom-xxlarge {
+    margin-bottom: 10rem !important;
+    @include respond(tab-port) {
+        margin-bottom: 7rem !important;
+    }
+}
+.u-margin-bottom-xlarge {
+    margin-bottom: 8rem !important;
+    @include respond(tab-port) {
+        margin-bottom: 2rem !important;
+    }
+}
+.u-margin-bottom-large {
+    margin-bottom: 6rem !important;
+    @include respond(tab-port) {
+        margin-bottom: 2rem !important;
+    }
+}
+.u-margin-bottom-medium { margin-bottom: 4rem !important; }
+.u-margin-bottom-small { margin-bottom: 2rem !important; }
+.u-margin-bottom-xsmall { margin-bottom: 1rem !important; }
+
+// POSITIONING
+.relative-elem { position:relative; }
+
+// BACKGROUND COLORS
+.background {
+    &--yellow {
+        background: $color-primary-yellow;
+    }
+    
+    &--blue {
+        background: $color-primary-blue;
+    }
+    
+    &--red {
+        background: $color-primary-red;
+    }
+}
+
+// TITLE BACKGROUNDS
+.title {
+    &__bg {
+        width:100%;
+        height:100%;
+        position: absolute;
+        @include center($xy:xy);
+        padding: 3.5rem 1.5rem;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        transform: rotate(1.7deg) translate(-50%, -50%);
+        transform-origin: 0;
+
+        &--yellow {
+            background-image: url('../img/title-bg-yellow.png');   
+        }
+
+        &--blue {
+            background-image: url('../img/title-bg-blue.png');
+        }
+
+        &--red {
+            background-image: url('../img/title-bg-red.png');
+        }
+    }
+}
+
+// ICONS
+.icon-play {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 .5rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: .6rem;
+        left: .8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        box-sizing: border-box;
+        border-style: solid;
+        border-width: .9rem 0rem .9rem 1.7rem;
+        border-color: transparent transparent transparent $color-primary-red;
+    }
+}
+
+// SVG
+.svg {
+    &--red {
+        fill: $color-primary-red;
+    }
+
+    &--blue {
+        fill: $color-primary-blue;
+    }
+
+    &--yellow {
+        fill: $color-primary-yellow;
+    }
+
+    &--bluegreen {
+        fill: $color-blue-green;
+    }
+
+    &--black {
+        fill: $color-black;
+    }
+
+    &--brown {
+        fill: $color-brown;
+    }
+}
+    

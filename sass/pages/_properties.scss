@@ -1,0 +1,45 @@
+.section-properties {
+    padding: 15rem 0;
+    position: relative;
+}
+
+.properties {
+    &__text-box {
+        width: 100%;
+        position: relative;
+    }
+
+    &__img-box {
+        width: 90%;
+        position: relative;
+        margin-left: 10%;
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: .5rem;
+        overflow: hidden;
+    }
+
+    .location {
+        &__icon {
+            display: block;
+            position: relative;
+            width: 3rem;
+            height: 3rem;
+            float: left;
+            margin-right: .5rem;
+        }
+
+        &__title {
+            display: block;
+            position: relative;
+            float: left;
+            @include clearfix;
+        }
+    }
+}

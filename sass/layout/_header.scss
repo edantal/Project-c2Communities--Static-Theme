@@ -1,0 +1,29 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: $color-white;
+	height: 8rem;
+	width: 100%;
+	z-index: 500;
+    transition: background-color .3s;
+    transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    @include respond(tab-port) {
+        height: 10rem;
+    }
+
+    &__logo {
+        display: block;
+        position: absolute;
+        @include center(xy);
+        height: 6rem;
+    
+        &-img {
+            display: block;
+            height: 100%;
+        }
+    }
+}
