@@ -25,14 +25,6 @@ This project repository is created with:
 
 ---
 
-<details>
-  <summary>Resources</summary>
-
-- [WPEngine](https://wpengine.com/) - WP Platform (Staging environment)
-- [Visual Composer](https://visualcomposer.com/) - Builder plugin for WP Admin
-
-</details>
-
 <!-- ### Preview
 
 [View Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--Static-Theme/master/preview.jpg)
