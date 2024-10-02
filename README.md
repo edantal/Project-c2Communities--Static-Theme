@@ -27,6 +27,6 @@ This project repository is created with:
 
 <!-- ### Preview
 
-[View Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--Static-Theme/master/preview.jpg)
+[View Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview.jpg)
 
 -->
