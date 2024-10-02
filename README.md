@@ -25,8 +25,7 @@ This project repository is created with:
 
 ---
 
-<!-- ### Preview
+### Preview
 
-[View Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview.jpg)
-
--->
+[View Desktop Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview-desktop.jpg)
+[View Mobile Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview-mobile.jpg)
