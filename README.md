@@ -27,5 +27,5 @@ This project repository is created with:
 
 ### Preview
 
-[View Desktop Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview-desktop.jpg)
-[View Mobile Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview-mobile.jpg)
+- [View Desktop Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview-desktop.jpg)
+- [View Mobile Design](https://raw.githubusercontent.com/edantal/Project-c2Communities--StaticTheme/master/preview-mobile.jpg)
